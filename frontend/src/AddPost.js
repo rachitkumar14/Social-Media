@@ -31,7 +31,7 @@ function AddPost(props)
 
         setLoading(false);
          
-        await fetch(`http://localhost:8000/addPost`,{
+        await fetch(`${process.env.REACT_APP_API_URL}/addPost`,{
             method:"POST",
             credentials:'include',
             headers:{

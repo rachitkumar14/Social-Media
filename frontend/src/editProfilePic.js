@@ -17,7 +17,7 @@ function EditProfilePic(props) {
     console.log('data profile',data)
     setLoading(false);
     
-    await fetch(`http://localhost:8000/uploadProfilePic`,{
+    await fetch(`${process.env.REACT_APP_API_URL}/uploadProfilePic`,{
         method:"POST",
         credentials:'include',
         headers:{

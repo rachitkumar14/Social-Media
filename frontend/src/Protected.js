@@ -8,7 +8,7 @@ function Protected(props)
     const [userData , setUserData]=useState([])
     function readData()
     {
-    fetch('http://localhost:8000/userData',{
+    fetch(`${process.env.REACT_APP_API_URL}/userData`,{
             credentials:'include'
          }).then((res)=>{
             res.json().then((result)=>{

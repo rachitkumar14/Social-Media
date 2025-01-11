@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router";
 import { Button } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+
+
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Form from "react-bootstrap/Form";
 
@@ -42,7 +43,7 @@ function MyProfile() {
     setShowComment(true);
     setPostId(id);
 
-    fetch(`http://localhost:8000/allComments/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/allComments/${id}`, {
       credentials: "include",
     }).then((res) => {
       res.json().then((result) => {
@@ -55,7 +56,7 @@ function MyProfile() {
   //  Read User Data
 
   async function readData() {
-    await fetch("http://localhost:8000/userData", {
+    await fetch(`${process.env.REACT_APP_API_URL}/userData`, {
       credentials: "include",
     }).then((res) => {
       res.json().then((result) => {
@@ -73,7 +74,7 @@ function MyProfile() {
   // Handle Delete Post Function
 
   function deletePost(id) {
-    fetch(`http://localhost:8000/deletePost/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/deletePost/${id}`, {
       method: "DELETE",
       credentials: "include",
     }).then((res) => {
@@ -91,7 +92,7 @@ function MyProfile() {
   // Handle Like Function
 
   function handleLike(id) {
-    fetch(`http://localhost:8000/likePost/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/likePost/${id}`, {
       credentials: "include",
     }).then((res) => {
       res.json().then(() => {
@@ -107,7 +108,7 @@ function MyProfile() {
   async function handleComment(id) {
     const data = { myComment };
 
-    await fetch(`http://localhost:8000/myComment/${id}`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/myComment/${id}`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -136,7 +137,7 @@ function MyProfile() {
   // Delete Comment function
 
   async function deleteUserComment(id) {
-    await fetch(`http://localhost:8000/deleteComment/${id}`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/deleteComment/${id}`, {
       method: "DELETE",
       credentials: "include",
     }).then((res) => {
@@ -153,7 +154,8 @@ function MyProfile() {
 
   async function handleSearch() {
     try {
-      await fetch("http://localhost:8000/allUsers", {
+      
+      await fetch(`${process.env.REACT_APP_API_URL}/allUsers`, {
         credentials: "include",
       }).then((res) => {
         res.json().then((result) => {
@@ -177,7 +179,7 @@ function MyProfile() {
   // Handle Logout Feature
 
   async function logout() {
-    await fetch("http://localhost:8000/logout", {
+    await fetch(`${process.env.REACT_APP_API_URL}/logout`, {
       credentials: "include",
     }).then((res) => {
       res.json().then((result) => {

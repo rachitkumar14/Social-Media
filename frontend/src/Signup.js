@@ -20,7 +20,7 @@ function Signup() {
 
      else{
         const data = {userName, name , email , password}
-        await fetch("http://localhost:8000/signup",{
+        await fetch(`${process.env.REACT_APP_API_URL}/signup`,{
             method:"POST",
             credentials:'include',
             headers:{

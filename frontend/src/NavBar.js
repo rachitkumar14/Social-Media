@@ -18,7 +18,7 @@ function NavBar(props) {
 
   // console.log("pic", `./Images/${props.userData.profilePic}`);
   async function logout() {
-    await fetch("http://localhost:8000/logout", {
+    await fetch(`${process.env.REACT_APP_API_URL}/logout`, {
       credentials: "include",
     }).then((res) => {
       res.json().then((result) => {
@@ -39,7 +39,7 @@ function NavBar(props) {
   },[])
  async function readData()
   {
- await fetch('http://localhost:8000/userData',{
+ await fetch(`${process.env.REACT_APP_API_URL}/userData`,{
           credentials:'include'
        }).then((res)=>{
           res.json().then((result)=>{

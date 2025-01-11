@@ -19,7 +19,7 @@ function Login() {
         alert('please fill all inputs');
     }
     const data = {  email , password}
-        await fetch("http://localhost:8000/login",{
+        await fetch(`${process.env.REACT_APP_API_URL}/login`,{
             method:"POST",
             credentials:'include',
             headers:{

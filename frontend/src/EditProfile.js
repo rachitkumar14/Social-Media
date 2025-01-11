@@ -18,7 +18,7 @@ function EditProfile(props) {
 
   function readData()
     {
-    fetch('http://localhost:8000/userData',{
+    fetch('${process.env.REACT_APP_API_URL}/userData',{
             credentials:'include'
          }).then((res)=>{
             res.json().then((result)=>{
@@ -39,7 +39,7 @@ function EditProfile(props) {
   {
       e.preventDefault();
     const data = {name , userName}
-    await fetch(`http://localhost:8000/editProfile/${userName}`,{
+    await fetch(`${process.env.REACT_APP_API_URL}/editProfile/${userName}`,{
         method:"PUT",
         credentials:'include',
         headers:{

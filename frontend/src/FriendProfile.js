@@ -26,7 +26,7 @@ function FriendProfile(props) {
   }, []);
 
   async function readData() {
-    await fetch(`http://localhost:8000/friendData/${id}`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/friendData/${id}`, {
       credentials: "include",
     }).then((res) => {
       res.json().then((result) => {
@@ -44,7 +44,7 @@ function FriendProfile(props) {
   async function handleComment(id) {
     const data = { myComment };
 
-    await fetch(`http://localhost:8000/myComment/${id}`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/myComment/${id}`, {
       method: "POST",
       credentials: "include",
       headers: {
@@ -76,7 +76,7 @@ function FriendProfile(props) {
     setShowComment(true);
     setPostId(id);
 
-    fetch(`http://localhost:8000/allComments/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/allComments/${id}`, {
       credentials: "include",
     }).then((res) => {
       res.json().then((result) => {
@@ -98,7 +98,7 @@ function FriendProfile(props) {
   // Handle Like Function
 
   function handleLike(id) {
-    fetch(`http://localhost:8000/likePost/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/likePost/${id}`, {
       credentials: "include",
     }).then((res) => {
       res.json().then((resp) => {
