@@ -1,0 +1,233 @@
+
+.home , .about{
+    height: 100vh;
+}
+.signup  , .contact{
+    height: 99.8vh;
+}
+.contact-form{
+    height: 100%;
+}
+.bg-home,.bg-pages,.bg-signup , .bg-login ,.bg-contact{
+    background-image: url('./Images/first\ page\ background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100.2%;
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+.head{
+    font-family: cursive;
+}
+.title , .sub-title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.bg-pages{
+    background-image: url('./Images/All\ background\ image.jpg');
+}
+.bg-signup{
+    background-image: url('./Images/signup\ page\ logo.jpg');
+}
+.bg-login{
+    background-image: url('./Images/home.jpg');
+}
+.bg-contact{
+    background-image: url('./Images/Home\ background.jpg');
+}
+.navs{
+    color: white;
+    text-decoration: none;
+}
+.navs:hover{
+    color: yellow;
+}
+ 
+
+/* My Profile Page */
+
+
+.myProfilePage {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 80%;
+    /* border: solid 2px green; */
+  
+}
+.profile{
+    height: fit-content;
+    width: 99vw;
+    background-color: black;
+
+    /* border:  solid 5px brown; */
+}
+ .edit-profile , .editData , .profilePic-page{
+    height: 100vh;
+    width: 100vw;
+  
+
+}
+
+.bts:hover{
+    position: relative;
+    bottom: 4px;
+}
+.myProfileHeading , .your-posts{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.profile-middle{
+   padding-left: 15%;
+   gap: 7%;
+   border: solid 2px yellow;
+   border-radius: 25px;
+   /* border-bottom: none; */
+   /* border-top: none; */
+  
+}
+.side-nav{
+    height: 100dvh;
+    border: solid 1px white;
+    border-radius: 12px;
+    border-bottom: none;
+    padding-top: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 20vw;
+}
+
+.postCard{
+    display: flex;
+    flex-direction: column;
+    
+    width: 260px;
+}
+.data{
+    
+    margin-top: -12px;
+    margin-left: -12px;
+    width: 100%;
+}
+.postImage{
+    height: 200px;
+
+}
+.body-card{
+  
+    display: flex;
+    flex-direction: column;
+    
+    /* margin-left: -10px; */
+    width: 100%;
+}
+
+/* Cards */
+.cards{
+   margin-top: 10px;
+   
+ 
+  
+    width: 100%;
+    padding-left: 20px;
+    
+}
+.posts{
+    width: 80vw;
+   
+}
+.anchor-tag{
+    width: 99vw;
+    background-color: black;
+   
+}
+.anchor{
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+   
+}
+.search-bar{
+    margin-top: -15px;
+}
+
+/* Comment */
+.commentInput{
+    border-top: none;
+    border-left: none;
+    font-size:17px;
+    width: 100%;
+    padding-bottom: -46px;
+    border-right: none;
+    background-color: black;
+    margin-top: -15px;
+    outline: none;
+    box-shadow: none;
+    color: white;
+}
+.commentInput::placeholder{
+    color: white;
+}
+.commentsSubHeading , .search-userName , .friendUserName{
+    font-family: cursive;
+   
+}
+
+
+/* Friend profile page */
+.friendProfile-leftPart{
+    height: 100vh;
+    background-color: black;
+    width: 230px;
+    padding: 10px;
+}
+.frinedProfile-rightPart{
+    height: 100lvh;
+    width: 100%;
+    background-color: #cca43b;
+}
+.friendPosts{
+    background-color: #cca43b;
+}
+.friendprofileButton{
+    background-color: #6e0d25;
+}
+.friendPostCard{
+    width: 230px;
+   flex-wrap: wrap;
+    height: 190px;
+}
+.friendPostImage{
+    height: 170px;
+    
+}
+
+@media screen and (max-width:600px) {
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+    }
+    .side-nav{
+        width: 100vw;
+        border: none;
+    }
+
+  .side-nav-heading{
+    display: none;
+  }
+  .myProfilePage{
+    width: 100vw;
+  }
+
+  .posts{
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+    width: 100vw;
+  }
+
+
+    
+}
