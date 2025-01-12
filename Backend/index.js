@@ -17,9 +17,10 @@ const cloudinary = require('./cloudinary.js')
 
 
 
+
 const bcrypt = require('bcrypt');
 
-const PORT = 8000;
+const PORT = process.env.PORT || 6000
 
 app.use(cors({origin:process.env.frontend_url,credentials:true}))
 app.use(express.json({
