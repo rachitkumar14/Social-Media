@@ -21,7 +21,7 @@ const bcrypt = require('bcrypt');
 
 const PORT = 8000;
 
-app.use(cors({origin:process.env.frontend_url,credentials:true}));
+app.use(cors({origin:process.env.frontend_url,credentials:true}))
 app.use(express.json({
     limit:"20mb",
 }));
